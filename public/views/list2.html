@@ -1,0 +1,34 @@
+<div class="page slideIn">
+    <div class="bd" style="height: 100%;">
+        <div class="weui_tab">
+            <div class="weui_tab_bd">
+                <div class="weui_panel weui_panel_access">
+                    <div class="weui_panel_hd">{{sel.name}}</div>
+                    <div class="weui_panel_bd">
+                        <a ui-sref="content({uid:sel.up_style,id:d._id})" class="weui_media_box weui_media_appmsg" ng-repeat="d in arts | filter:list2Filter | orderBy:'id':reverse=true">
+                            <div class="weui_media_hd">
+                                <img class="weui_media_appmsg_thumb" ng-src="{{'http://19.111.131.48:3001/'+d.pic}}" alt="">
+                            </div>
+                            <div class="weui_media_bd">
+                                <h4 class="weui_media_title">{{d.title}}</h4>
+                                <p class="weui_media_desc">{{d.desc}}</p>
+                            </div>
+                        </a>
+                        <div class="weui_panel_hd" data-ng-if="!sel.articles.length">
+                            <p class="weui_media_title" style="color:#000;font-size:16px;">没有更多信息！</p>
+                        </div>
+                    </div>
+                    <!-- <a class="weui_panel_ft" href="javascript:void(0);">查看更多</a> -->
+                </div>
+            </div>
+            <div class="weui_tabbar">
+                <a ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true" ui-sref="list({id:d._id})" ng-class="{weui_bar_item_on: d._id===sel.up_style}" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img ng-src="../res/img/{{d._id}}.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label" ng-bind="d.name"></p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

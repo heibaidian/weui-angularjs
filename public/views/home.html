@@ -1,0 +1,18 @@
+<div class="page slideIn">
+    <div class="logo">
+        <img src="../res/img/logo.png" />
+    </div>
+    <div class="bd">
+        <div class="weui_grids">
+            <a ui-sref="list({id:d._id})" class="weui_grid js_grid my_grid" ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true">
+                <div class="weui_grid_icon bigicon">
+                    <img ng-src="../res/img/{{d._id}}.png" alt="d.name">
+                </div>
+                <p class="weui_grid_label" ng-bind="d.name"></p>
+            </a>
+        </div>
+    </div>
+    <div class="footerbg">
+        <img src="../res/img/hbd_21.png" />
+    </div>
+</div>
