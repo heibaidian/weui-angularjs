@@ -10,6 +10,11 @@
                         <section>
                             <p ng-bind-html="safeHtml"></p>
                         </section>
+                        <section>
+                            <div ng-repeat="p in art.psd" class="psd">
+                                <img ng-src="{{'http://heibaidian.com/'+p}}" />
+                            </div>
+                        </section>
                     </article>
                 </div>
             </div>

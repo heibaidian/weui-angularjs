@@ -5,7 +5,7 @@ angular
 ListController.$inject = ['$scope', '$stateParams', '$http'];
 
 function ListController ($scope, $stateParams, $http) {
-  	$http.jsonp('http://10.169.91.98:3001/api/styles/me/56fdad2ced5f91dd0499db97?callback=JSON_CALLBACK')
+  	$http.jsonp('http://heibaidian.com/api/styles/me/56fdad2ced5f91dd0499db97?callback=JSON_CALLBACK')
     .success(function(data, status) {
         $scope.data = data;
     }).

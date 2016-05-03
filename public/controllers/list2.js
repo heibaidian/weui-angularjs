@@ -5,7 +5,7 @@ angular
 List2Controller.$inject = ['$scope', '$stateParams', '$http'];
 
 function List2Controller ($scope, $stateParams, $http) {
-	$http.jsonp('http://10.169.91.98:3001/api/styles/me/56fdad2ced5f91dd0499db97?callback=JSON_CALLBACK')
+	$http.jsonp('http://heibaidian.com/api/styles/me/56fdad2ced5f91dd0499db97?callback=JSON_CALLBACK')
     .success(function(data, status) {
         $scope.data = data;
     }).
@@ -17,7 +17,7 @@ function List2Controller ($scope, $stateParams, $http) {
       return !item.up_style;
     };
     
-    $http.jsonp('http://10.169.91.98:3001/api/arttypes/me/56fdad2ced5f91dd0499db97?callback=JSON_CALLBACK')
+    $http.jsonp('http://heibaidian.com/api/arttypes/me/56fdad2ced5f91dd0499db97?callback=JSON_CALLBACK')
     .success(function(arts, status) {
         $scope.arts = arts;
     }).
