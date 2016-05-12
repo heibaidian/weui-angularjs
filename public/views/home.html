@@ -4,7 +4,7 @@
     </div>
     <div class="bd">
         <div class="weui_grids">
-            <a ui-sref="list({id:d._id})" class="weui_grid js_grid my_grid" ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true">
+            <a ng-click="toPage(d)" class="weui_grid js_grid my_grid" ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true">
                 <div class="weui_grid_icon bigicon">
                     <img ng-src="../res/img/{{d._id}}.png" alt="d.name">
                 </div>

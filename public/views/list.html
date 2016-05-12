@@ -4,7 +4,7 @@
             <div class="weui_tab_bd">
                 <div class="weui_cells_title"></div>
                 <div class="weui_cells weui_cells_access">
-                    <a class="weui_cell" ui-sref="list2({id:d._id})" ng-repeat="d in data | filter:listFilter | orderBy:'id':reverse=true">
+                    <a class="weui_cell" ng-click="toPage(d)" ng-repeat="d in data | filter:listFilter | orderBy:'id':reverse=true">
                         <div class="weui_cell_bd weui_cell_primary">
                             <p ng-bind="d.name"></p>
                         </div>
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="weui_tabbar">
-                <a ui-sref="list({id:d._id})" ui-sref-active="weui_bar_item_on" class="weui_tabbar_item" ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true">
+                <a ng-click="toPagebar(d)" ng-class="{weui_bar_item_on: d._id===itemId}" class="weui_tabbar_item" ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true">
                     <div class="weui_tabbar_icon">
                         <img ng-src="../res/img/{{d._id}}.png" alt="">
                     </div>

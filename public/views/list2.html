@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="weui_tabbar">
-                <a ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true" ui-sref="list({id:d._id})" ng-class="{weui_bar_item_on: d._id===sel.up_style}" class="weui_tabbar_item">
+                <a ng-click="toPagebar(d)" ng-class="{weui_bar_item_on: d._id===sel.up_style}" ng-repeat="d in data | filter:homeFilter | orderBy:'id':reverse=true" class="weui_tabbar_item">
                     <div class="weui_tabbar_icon">
                         <img ng-src="../res/img/{{d._id}}.png" alt="">
                     </div>
